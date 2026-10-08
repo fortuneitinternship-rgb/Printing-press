@@ -1,0 +1,45 @@
+.footer {
+  background: #073b66;
+  color: white;
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+.footer h4 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.footer h5 {
+  margin-bottom: 18px;
+}
+
+.footer p {
+  color: #d7e3ee;
+  line-height: 1.7;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  color: #d7e3ee;
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 35px;
+  padding: 15px;
+  text-align: center;
+  color: #d7e3ee;
+}

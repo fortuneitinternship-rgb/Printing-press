@@ -1,0 +1,38 @@
+.products-page {
+  padding: 60px 0;
+  min-height: 600px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title h1 {
+  color: #073b66;
+}
+
+.page-title p {
+  color: #777;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  border: 1px solid #073b66;
+  background: white;
+  color: #073b66;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #073b66;
+  color: white;
+}
