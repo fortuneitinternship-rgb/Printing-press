@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Routes, Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
 
@@ -13,42 +14,28 @@ import Checkout from "../pages/Checkout/Checkout";
 
 function AppRoutes() {
   return (
-    <BrowserRouter>
-      <Routes>
-
-        <Route element={<MainLayout />}>
-
-          {/* Home */}
-          <Route path="/" element={<Home />} />
-
-          {/* Products */}
-          <Route path="/products" element={<Products />} />
-
-          {/* Product Details */}
-          <Route
-            path="/products/:id"
-            element={<ProductDetails />}
-          />
-
-          {/* Cart */}
-          <Route path="/cart" element={<Cart />} />
-
-          {/* Wishlist */}
-          <Route path="/wishlist" element={<Wishlist />} />
-
-          {/* Login */}
-          <Route path="/login" element={<Login />} />
-
-          {/* Register */}
-          <Route path="/register" element={<Register />} />
-
-          {/* Checkout */}
-          <Route path="/checkout" element={<Checkout />} />
-
-        </Route>
-
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/checkout" element={<Checkout />} />
+        
+        <Route
+          path="*"
+          element={
+            <div className="container text-center py-5">
+              <h1>404 - Page Not Found</h1>
+              <p>The page you are looking for does not exist.</p>
+            </div>
+          }
+        />
+      </Route>
+    </Routes>
   );
 }
 
