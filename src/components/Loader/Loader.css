@@ -1,7 +1,21 @@
+
 .loader-container {
-  min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 200px;
+  width: 100%;
+  gap: 12px;
+}
+
+.loader-container p {
+  margin: 0;
+  font-size: 16px;
+  color: #073b66;
+}
+
+.loader-container .spinner-border {
+  width: 40px;
+  height: 40px;
 }

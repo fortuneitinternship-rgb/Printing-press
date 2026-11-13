@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -8,23 +8,19 @@ function Navbar() {
       {/* Top Information Bar */}
       <div className="top-bar">
         <div className="container">
-
           <div>
             Quality Printing | Custom Designs | Bulk Orders | Fast Delivery
           </div>
 
           <div>
             <i className="bi bi-telephone"></i>
-            +91 98765 43210
+            +91 9491047221
           </div>
-
         </div>
       </div>
 
-
       {/* Main Navbar */}
       <nav className="navbar navbar-expand-lg bg-white shadow-sm">
-
         <div className="container">
 
           {/* Logo */}
@@ -32,36 +28,32 @@ function Navbar() {
             to="/"
             className="navbar-brand d-flex align-items-center"
           >
-
-            <div className="logo-box">
-              P
-            </div>
+            <div className="logo-box">P</div>
 
             <div className="ms-2">
               <strong>PrintPro</strong>
               <small>Printing Press</small>
             </div>
-
           </Link>
 
-
-          {/* Mobile Toggle */}
+          {/* Mobile Toggle Button */}
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mainNavbar"
+            aria-label="Toggle navigation"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
 
           {/* Navigation */}
           <div
             className="collapse navbar-collapse"
             id="mainNavbar"
           >
-
             <ul className="navbar-nav mx-auto">
 
               <li className="nav-item">
@@ -96,7 +88,6 @@ function Navbar() {
 
             </ul>
 
-
             {/* Right Icons */}
             <div className="navbar-icons">
 
@@ -124,17 +115,12 @@ function Navbar() {
               </Link>
 
             </div>
-
           </div>
-
         </div>
-
       </nav>
-
 
       {/* Category Bar */}
       <div className="category-bar">
-
         <div className="container">
 
           <Link to="/products">
@@ -168,9 +154,7 @@ function Navbar() {
           </Link>
 
         </div>
-
       </div>
-
     </>
   );
 }
