@@ -1,96 +1,72 @@
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer">
-
+    <footer className="site-footer">
       <div className="container">
+        <div className="footer-grid">
 
-        <div className="row">
-
-          {/* About */}
-          <div className="col-md-3">
-
-            <h4>PrintPro</h4>
+          {/* Brand section */}
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo">
+              PrintPro
+            </Link>
 
             <p>
-              Quality printing solutions for weddings,
-              businesses, events and special occasions.
+              Creative printing solutions for every special
+              moment and business need.
             </p>
 
-            <div className="social-icons">
-
-              <i className="bi bi-facebook"></i>
-              <i className="bi bi-instagram"></i>
-              <i className="bi bi-whatsapp"></i>
-              <i className="bi bi-youtube"></i>
-
+            <div className="social-links">
+              <a href="https://instagram.com" aria-label="Instagram">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="https://facebook.com" aria-label="Facebook">
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a href="https://linkedin.com" aria-label="LinkedIn">
+                <i className="bi bi-linkedin"></i>
+              </a>
             </div>
-
           </div>
 
-
-          {/* Quick Links */}
-          <div className="col-md-3">
-
-            <h5>Quick Links</h5>
-
+          {/* Quick links */}
+          <div className="footer-column">
+            <h3>Quick Links</h3>
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>
-            <Link to="/wishlist">Wishlist</Link>
-            <Link to="/cart">Cart</Link>
-            <Link to="/login">Login</Link>
-
+            <Link to="/gallery">Gallery</Link>
+            <Link to="/about">About Us</Link>
           </div>
-
 
           {/* Services */}
-          <div className="col-md-3">
-
-            <h5>Printing Services</h5>
-
-            <Link to="/products">Marriage Cards</Link>
+          <div className="footer-column">
+            <h3>Our Services</h3>
+            <Link to="/products">Wedding Cards</Link>
             <Link to="/products">Visiting Cards</Link>
             <Link to="/products">Pamphlets</Link>
-            <Link to="/products">Bill Books</Link>
-            <Link to="/products">Posters & Banners</Link>
-
+            <Link to="/products">Posters & Stickers</Link>
           </div>
 
-
           {/* Contact */}
-          <div className="col-md-3">
-
-            <h5>Contact Us</h5>
-
-            <p>
-              <i className="bi bi-telephone"></i>
-              +91 98765 43210
-            </p>
-
-            <p>
-              <i className="bi bi-envelope"></i>
-              info@printpro.com
-            </p>
-
-            <p>
-              <i className="bi bi-geo-alt"></i>
-              Hyderabad, Telangana
-            </p>
-
+          <div className="footer-column footer-contact">
+            <h3>Contact Us</h3>
+            <p><i className="bi bi-telephone"></i> +91 XXXXX XXXXX</p>
+            <p><i className="bi bi-envelope"></i> hello@example.com</p>
+            <p><i className="bi bi-geo-alt"></i> Hyderabad, India</p>
+            <Link to="/contact">Contact Information</Link>
           </div>
 
         </div>
-
       </div>
-
 
       <div className="footer-bottom">
-        © 2026 PrintPro. All Rights Reserved.
+        <p>
+          © {new Date().getFullYear()} PrintPro. All rights reserved.
+        </p>
       </div>
-
     </footer>
   );
 }

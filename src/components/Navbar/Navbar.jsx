@@ -1,9 +1,19 @@
 
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+>>>>>>> 58ae147398e76c26f08c78b624af71b414909376
 import "./Navbar.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
+<<<<<<< HEAD
     <>
       {/* Top Information Bar */}
       <div className="top-bar">
@@ -22,12 +32,54 @@ function Navbar() {
       {/* Main Navbar */}
       <nav className="navbar navbar-expand-lg bg-white shadow-sm">
         <div className="container">
+=======
+    <header className="site-header">
+      <div className="container navbar-container">
 
-          {/* Logo */}
+        {/* Logo */}
+        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+          <span className="brand-icon">P</span>
+          <span>PrintPro</span>
+        </Link>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="mobile-menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+        >
+          <i className={`bi ${menuOpen ? "bi-x-lg" : "bi-list"}`}></i>
+        </button>
+
+        {/* Navigation Links */}
+        <nav className={`navbar-links ${menuOpen ? "active" : ""}`}>
+
+          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+
+          <NavLink to="/products" onClick={closeMenu}>
+            Products
+          </NavLink>
+
+          <NavLink to="/wishlist" onClick={closeMenu}>
+            <i className="bi bi-heart"></i> Wishlist
+          </NavLink>
+
+          <NavLink to="/cart" onClick={closeMenu}>
+            <i className="bi bi-bag"></i> Cart
+          </NavLink>
+
+          <NavLink to="/login" onClick={closeMenu}>
+            Login
+          </NavLink>
+>>>>>>> 58ae147398e76c26f08c78b624af71b414909376
+
           <Link
-            to="/"
-            className="navbar-brand d-flex align-items-center"
+            to="/quote"
+            className="quote-button"
+            onClick={closeMenu}
           >
+<<<<<<< HEAD
             <div className="logo-box">P</div>
 
             <div className="ms-2">
@@ -156,6 +208,14 @@ function Navbar() {
         </div>
       </div>
     </>
+=======
+            Get a Quote
+          </Link>
+
+        </nav>
+      </div>
+    </header>
+>>>>>>> 58ae147398e76c26f08c78b624af71b414909376
   );
 }
 

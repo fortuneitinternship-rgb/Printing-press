@@ -1,27 +1,79 @@
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #24332c;
+  background: #ffffff;
+
+  --primary-color: #073b66;
+  --secondary-color: #0077b6;
+  --accent-color: #e63946;
+  --background-color: #fff8f0;
+  --text-color: #24332c;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #222;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-img {
-  max-width: 100%;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.main-layout {
-  min-height: 100vh;
+/* Desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }

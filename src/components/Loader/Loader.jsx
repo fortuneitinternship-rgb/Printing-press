@@ -1,14 +1,8 @@
-import "./Loader.css";
-
-function Loader() {
+function Loader({ message = "Loading..." }) {
   return (
-    <div className="loader-container">
-
-      <div className="spinner-border text-primary">
-      </div>
-
-      <p>Loading...</p>
-
+    <div className="loader-container" role="status" aria-live="polite">
+      <div className="loader-spinner" />
+      <p>{message}</p>
     </div>
   );
 }
